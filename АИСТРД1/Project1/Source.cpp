@@ -11,7 +11,7 @@ void fill_array(int ** &array, const size_t len, int value) {
 	for (i = 0; i < len; i++)
 		array[i] = new int[len];
 
-	// Проход через первую половину часов
+	//РџРµСЂРІР°СЏ РїРѕР»РѕРІРёРЅР° С‡Р°СЃРѕРІ
 	for (i = 0; i < half; i++) {
 		for (j = 0; j < i + 1; j++) 
 			array[j][i] = value++;
@@ -24,7 +24,7 @@ void fill_array(int ** &array, const size_t len, int value) {
 			
 	}
 
-	//Проход в середине часов при нечетных размерах
+	//РЎРµСЂРµРґРёРЅР° С‡Р°СЃРѕРІ
 	if (even) {
 	//	for (int i = half; i == half; i++)
 			for ( j = 0; j < len; j++){
@@ -33,7 +33,7 @@ void fill_array(int ** &array, const size_t len, int value) {
 			}
 	}
 	
-	//Проход часов второй половины
+	//Р’С‚РѕСЂР°СЏ РїРѕР»РѕРІРёРЅР° С‡Р°СЃРѕРІ
 	for ( i = half + even; i < len; i++) {
 		for ( j = 0; j < len - i; j++)
 			array[j][i] = value++;
